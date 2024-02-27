@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="exit">Close</string>
+    <string name="restore_pwd">Recuperar Contraseña</string>
+</resources>
