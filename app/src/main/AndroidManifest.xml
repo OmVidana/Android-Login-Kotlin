@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
+            android:name=".AddMovie"
+            android:exported="false"
+            android:launchMode="singleInstance"/>
+        <activity
             android:name=".Details"
             android:exported="false"
             android:launchMode="singleInstance" />
@@ -27,7 +31,7 @@
         <activity
             android:name=".MainMenu"
             android:exported="false"
-            android:launchMode="singleInstance" />
+            android:launchMode="singleTop" />
         <activity
             android:name=".LogIn"
             android:exported="true">

@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.widget.ListView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.MenuProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -88,8 +89,13 @@ class MainMenu : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
-
         })
+
+        var addButton = findViewById<FloatingActionButton>(R.id.add_button)
+
+        addButton.setOnClickListener{
+            startActivity(Intent(this, AddMovie::class.java))
+        }
     }
 
     public fun fullList() {

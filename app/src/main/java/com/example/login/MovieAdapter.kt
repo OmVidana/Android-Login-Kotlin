@@ -21,12 +21,12 @@ class MovieAdapter(private val context: Activity, private val movieArL: ArrayLis
         view.findViewById<TextView>(R.id.genre).text = movieArL[position].genre
         view.findViewById<TextView>(R.id.year).text = movieArL[position].year
 
-        when (movieArL[position].id?.toInt()) {
-            1 -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars1))
-            2 -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars2))
-            3 -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars3))
+        when (movieArL[position].name?.toString()) {
+            "Cars" -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars1))
+            "Cars 2" -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars2))
+            "Cars 3" -> view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.cars3))
             else -> {
-
+                view.findViewById<ImageView>(R.id.image).setImageDrawable(ContextCompat.getDrawable(context, R.drawable.login))
             }
         }
 
